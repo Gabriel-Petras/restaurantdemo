@@ -132,3 +132,4 @@ fadeElements.forEach(element => {
     fadeObserver.observe(element);
 });
 
+

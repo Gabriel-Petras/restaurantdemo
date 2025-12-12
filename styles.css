@@ -85,7 +85,10 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--dark-color) 100%);
+     /* Background photo: using local 'gym.jpg' placed in the project root. If you move the file,
+         update the path accordingly (e.g., 'assets/gym.jpg'). */
+     background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+                    url("assets/gym.jpg") center/cover no-repeat;
     color: var(--white);
     padding: 150px 20px 100px;
     text-align: center;
@@ -491,4 +494,5 @@ section {
         transform: scale(1);
     }
 }
+
 

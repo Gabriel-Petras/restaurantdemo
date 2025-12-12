@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GymDemo Gym - Transform Your Body</title>
+    <title>FitZone Gym - Transform Your Body</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <div class="nav-brand">GymDemo</div>
+            <div class="nav-brand">FitZone</div>
             <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -55,7 +55,7 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">Why Choose GymDemo?</h2>
+            <h2 class="section-title">Why Choose FitZone?</h2>
             <div class="about-grid">
                 <div class="about-card">
                     <div class="card-icon">💪</div>
@@ -176,7 +176,7 @@
                     </div>
                     <div class="info-item">
                         <h3>✉️ Email</h3>
-                        <p>info@gymdemogym.com</p>
+                        <p>info@fitzonegym.com</p>
                     </div>
                     <div class="info-item">
                         <h3>🕐 Hours</h3>
@@ -202,12 +202,10 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 GymDemo Gym. All rights reserved.</p>
+            <p>&copy; 2024 FitZone Gym. All rights reserved.</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
-
-
