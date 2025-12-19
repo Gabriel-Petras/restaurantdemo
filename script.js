@@ -86,33 +86,53 @@ document.querySelectorAll('.stat').forEach(stat => {
     observer.observe(stat);
 });
 
-// Contact form handling
-const contactForm = document.getElementById('contactForm');
-
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    
-    // Simple validation
-    if (name && email && message) {
-        alert(`Thank you, ${name}! We've received your message and will get back to you soon.`);
-        contactForm.reset();
-    }
+// Tab switching for Today's Menu
+document.querySelectorAll('.tab-button').forEach(button => {
+    button.addEventListener('click', function() {
+        const tabName = this.getAttribute('data-tab');
+        
+        // Remove active class from all buttons and panes
+        document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
+        
+        // Add active class to clicked button and corresponding pane
+        this.classList.add('active');
+        document.getElementById(tabName).classList.add('active');
+    });
 });
 
-// Pricing card button interactions
-document.querySelectorAll('.pricing-card .btn').forEach(button => {
+// Reservation form handling
+const reservationForm = document.getElementById('reservationForm');
+
+if (reservationForm) {
+    reservationForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const date = document.getElementById('date').value;
+        const time = document.getElementById('time').value;
+        const guests = document.getElementById('guests').value;
+        
+        // Simple validation
+        if (name && email && phone && date && time && guests) {
+            alert(`Thank you, ${name}! Your reservation for ${guests} guest(s) on ${date} at ${time} has been confirmed. We'll see you soon!`);
+            reservationForm.reset();
+        }
+    });
+}
+
+// Menu selection card buttons
+document.querySelectorAll('.menu-selection-card .btn').forEach(button => {
     button.addEventListener('click', function() {
-        const planName = this.closest('.pricing-card').querySelector('h3').textContent;
-        alert(`You selected the ${planName} plan! Contact us to complete your membership.`);
+        const dishName = this.closest('.menu-selection-card').querySelector('h4').textContent;
+        alert(`${dishName} added to order!`);
     });
 });
 
 // Add fade-in animation on scroll
-const fadeElements = document.querySelectorAll('.about-card, .service-card, .pricing-card');
+const fadeElements = document.querySelectorAll('.menu-card, .menu-selection-card');
 
 const fadeObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -131,5 +151,3 @@ fadeElements.forEach(element => {
     element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     fadeObserver.observe(element);
 });
-
-

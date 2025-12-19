@@ -85,11 +85,8 @@ body {
 
 /* Hero Section */
 .hero {
-     /* Background photo: using local 'gym.jpg' placed in the project root. If you move the file,
-         update the path accordingly (e.g., 'assets/gym.jpg'). */
-     background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-                    /* Use the absolute GitHub Pages URL so the background loads correctly on the live site. */
-                    url("https://Gabriel-Petras.github.io/gymdemo/assets/gym.jpg") center/cover no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+                url("assets/images.jfif") center/cover no-repeat;
     color: var(--white);
     padding: 150px 20px 100px;
     text-align: center;
@@ -109,6 +106,7 @@ body {
     font-size: 3.5rem;
     margin-bottom: 1rem;
     animation: fadeInUp 1s ease;
+    color: #ffffff;
 }
 
 .hero-subtitle {
@@ -116,6 +114,7 @@ body {
     margin-bottom: 2rem;
     opacity: 0.9;
     animation: fadeInUp 1s ease 0.2s both;
+    color: #ffffff;
 }
 
 .hero-buttons {
@@ -141,13 +140,14 @@ body {
 .stat-number {
     font-size: 3rem;
     font-weight: bold;
-    color: var(--primary-color);
+    color: #ffffff;
     margin-bottom: 0.5rem;
 }
 
 .stat-label {
     font-size: 1rem;
     opacity: 0.9;
+    color: #ffffff;
 }
 
 /* Buttons */
@@ -196,6 +196,11 @@ body {
     color: var(--white);
 }
 
+.btn-sm {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+}
+
 /* Section Styles */
 section {
     padding: 80px 20px;
@@ -208,181 +213,174 @@ section {
     color: var(--dark-color);
 }
 
-/* About Section */
-.about {
+/* Menu Section */
+.menu {
+    background: var(--white);
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.menu-card {
+    background: var(--light-color);
+    padding: 2rem;
+    border-radius: 10px;
+    border-top: 4px solid var(--primary-color);
+}
+
+.menu-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.menu-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+}
+
+.item-name {
+    font-weight: 600;
+    color: var(--dark-color);
+    font-size: 1.1rem;
+}
+
+.item-price {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.item-description {
+    color: #666;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* Specials Section */
+.specials {
     background: var(--light-color);
 }
 
-.about-grid {
+.menu-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tab-button {
+    padding: 12px 24px;
+    border: 2px solid var(--primary-color);
+    background: var(--white);
+    color: var(--primary-color);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.tab-button.active {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.tab-content {
+    position: relative;
+}
+
+.tab-pane {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+.menu-items-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
 }
 
-.about-card {
+.menu-selection-card {
     background: var(--white);
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
 }
 
-.about-card:hover {
-    transform: translateY(-10px);
+.menu-selection-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
 }
 
-.card-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.about-card h3 {
-    margin-bottom: 1rem;
+.menu-selection-card h4 {
     color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
 }
 
-/* Services Section */
-.services {
-    background: var(--white);
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.service-card {
-    background: var(--light-color);
-    padding: 2rem;
-    border-radius: 10px;
-    border-left: 4px solid var(--primary-color);
-}
-
-.service-card h3 {
-    color: var(--secondary-color);
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-}
-
-.service-card ul {
-    list-style: none;
-    margin-top: 1rem;
-}
-
-.service-card li {
-    padding: 0.5rem 0;
-    padding-left: 1.5rem;
-    position: relative;
-}
-
-.service-card li:before {
-    content: "✓";
-    position: absolute;
-    left: 0;
+.menu-selection-card .price {
     color: var(--primary-color);
     font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
 }
 
-/* Pricing Section */
-.pricing {
-    background: var(--light-color);
-}
-
-.pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.pricing-card {
-    background: var(--white);
-    padding: 2.5rem;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-    position: relative;
-}
-
-.pricing-card:hover {
-    transform: translateY(-10px);
-}
-
-.pricing-card.featured {
-    border: 3px solid var(--primary-color);
-    transform: scale(1.05);
-}
-
-.badge {
-    position: absolute;
-    top: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--primary-color);
-    color: var(--white);
-    padding: 5px 20px;
-    border-radius: 20px;
+.menu-selection-card .description {
+    color: #666;
     font-size: 0.9rem;
-    font-weight: bold;
-}
-
-.pricing-card h3 {
-    font-size: 1.8rem;
     margin-bottom: 1rem;
-    color: var(--secondary-color);
+    line-height: 1.5;
 }
 
-.price {
-    font-size: 3rem;
-    font-weight: bold;
-    color: var(--primary-color);
-    margin-bottom: 2rem;
-}
-
-.price span {
-    font-size: 1rem;
-    color: var(--text-color);
-}
-
-.pricing-features {
-    list-style: none;
-    margin-bottom: 2rem;
-    text-align: left;
-}
-
-.pricing-features li {
-    padding: 0.8rem 0;
-    padding-left: 1.5rem;
-    position: relative;
-    border-bottom: 1px solid #eee;
-}
-
-.pricing-features li:before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: var(--primary-color);
-    font-weight: bold;
-}
-
-/* Contact Section */
-.contact {
+/* Reservations Section */
+.reservations {
     background: var(--white);
 }
 
-.contact-content {
+.reservation-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: 3rem;
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
+    background: var(--light-color);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 
-.contact-info {
+.reservation-info {
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -391,29 +389,54 @@ section {
 .info-item h3 {
     color: var(--secondary-color);
     margin-bottom: 0.5rem;
+    font-size: 1.1rem;
 }
 
-.contact-form {
+.info-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.reservation-form {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
 .form-group input,
-.form-group textarea {
+.form-group textarea,
+.form-group select {
     width: 100%;
     padding: 12px;
     border: 2px solid #ddd;
     border-radius: 5px;
     font-size: 1rem;
     font-family: inherit;
-    transition: border-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .form-group input:focus,
-.form-group textarea:focus {
+.form-group textarea:focus,
+.form-group select:focus {
     outline: none;
     border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(255, 107, 53, 0.3);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #999;
 }
 
 /* Footer */
@@ -433,6 +456,15 @@ section {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
 
@@ -491,9 +523,16 @@ section {
         font-size: 2rem;
     }
 
-    .pricing-card.featured {
-        transform: scale(1);
+    .reservation-content {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-tabs {
+        gap: 0.5rem;
+    }
+
+    .tab-button {
+        padding: 10px 16px;
+        font-size: 0.9rem;
     }
 }
-
-
